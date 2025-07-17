@@ -11,7 +11,10 @@ function App() {
     setError("");
     setResponse("");
     try {
-      const res = await axios.get("http://localhost:8080/order/place");
+      //const res = await axios.get("http://localhost:8080/order/place");
+      const res = await axios.get(
+        "https://order-service-sqgt.onrender.com/order/place"
+      );
       setResponse(res.data);
     } catch (err) {
       setError("Failed to place the order, Is the Spring Boot App running ?");
